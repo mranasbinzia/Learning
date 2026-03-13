@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    sans-serif;
+  background: #f4f4f5;
+  color: #111827;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+}
+
+.hero {
+  width: 100%;
+  max-width: 1120px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 3rem;
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #e5e7eb;
+  padding: 2.75rem 2.5rem;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.eyebrow {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: #6b7280;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 3vw + 1.5rem, 3.25rem);
+  line-height: 1.05;
+  color: #030712;
+}
+
+.subtitle {
+  max-width: 34rem;
+  line-height: 1.6;
+  font-size: 0.98rem;
+  color: #4b5563;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tag {
+  font-size: 0.78rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  color: #374151;
+}
+
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-badge {
+  align-self: flex-end;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  color: #6b7280;
+}
+
+.mock-card {
+  border-radius: 18px;
+  border: 1px dashed #d1d5db;
+  background: linear-gradient(135deg, #f9fafb, #e5e7eb);
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.mock-thumb {
+  border-radius: 12px;
+  background: #e5e7eb;
+  border: 1px solid #d4d4d8;
+}
+
+.mock-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+.mock-line {
+  height: 7px;
+  border-radius: 999px;
+  background: #d4d4d8;
+  width: 70%;
+}
+
+.mock-line.wide {
+  width: 90%;
+}
+
+.caption {
+  font-size: 0.78rem;
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 2rem 1.75rem;
+  }
+
+  .hero-visual {
+    order: -1;
+  }
+}
